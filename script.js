@@ -66,10 +66,14 @@ function deleteNote(btn) {
   notes.removeChild(note);
   addLocalStorage();
 }
-function checked(note) {
-  note.classList.toggle('checked');
+function checked(noteDiv) {
+  noteDiv.classList.toggle('checked');
+
   notesTab.forEach((note) => {
-    note.checked === false ? (note.checked = true) : (note.checked = false);
+    if (note.id == noteDiv.getAttribute('data-id')) {
+      console.log(note.id, noteDiv.getAttribute('data-id'));
+      note.checked === false ? (note.checked = true) : (note.checked = false);
+    }
   });
   addLocalStorage();
 }
