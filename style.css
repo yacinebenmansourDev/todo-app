@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  color: #171819;
+}
+body {
+  min-height: 100vh;
+}
+
+header {
+  height: 15.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__form {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+input {
+  border: 0;
+  padding: 1.6rem 4.5rem;
+  border-radius: 200px;
+  font-size: 1.8rem;
+  background-color: transparent;
+  opacity: 0.6;
+  display: inline-block;
+}
+input:focus {
+  outline: 0;
+}
+.input_title-container,
+.input__text-container {
+  background-color: #74c0fc;
+  border-radius: 200px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.submit-btn {
+  padding: 1.2rem 2.3rem;
+  border-radius: 150px;
+  margin-right: 0.5rem;
+  background-color: #fff;
+  font-size: 1.8rem;
+}
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.darkmode-btn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.icon {
+  height: 32px;
+  width: 32px;
+  fill: #171819;
+}
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+}
+.grid-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 366px);
+  gap: 6.5rem;
+}
+.note {
+  cursor: pointer;
+  padding: 2rem;
+  background-color: #b9c4cc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-radius: 23px;
+}
+.note__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.note__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trash-icon {
+  height: 24px;
+  width: 24px;
+}
+.note__text {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.note.checked {
+  background-color: rgba(185, 196, 204, 0.6);
+}
+.note.checked .note__title {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+.note.checked .close-btn {
+  opacity: 0.6;
+}
+.note.checked .note__text {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
